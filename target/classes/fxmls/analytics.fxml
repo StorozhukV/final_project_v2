@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AnalyticsController">
+   <children>
+      <SplitPane dividerPositions="0.2429718875502008" layoutX="7.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ImageView fitHeight="91.0" fitWidth="163.0" layoutX="27.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="541.7572784423828" AnchorPane.topAnchor="13.0">
+                     <image>
+                        <Image url="@../YouTube_logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="166.0" layoutY="14.0" text="YouTube Analytics">
+                     <font>
+                        <Font size="62.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="595.0" layoutY="95.0" text="version 1.0.0.0.0.1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="53.0" layoutY="21.0" prefHeight="148.0" prefWidth="609.0" text="Привіт, ми команда зелених розробників створили додаток для аналізу YouTube каналів. Тут ти зможеш збирати статистику та порівнювати різні канали. Насолоджуйся :)" textAlignment="JUSTIFY" textFill="#0aa121" wrapText="true">
+                     <font>
+                        <Font name="Consolas" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="344.0" text="P.S. Зв'язатись з розробниками можна через finalProjectJava11@gmail.com ">
+                     <font>
+                        <Font name="Consolas" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnYoutubeAnalytics" layoutX="96.0" layoutY="194.0" mnemonicParsing="false" onAction="#moveToYoutubeAnalytics" prefHeight="70.0" prefWidth="203.0" style="-fx-background-color: #DC143C;" text="YouTube Analytics" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Consolas" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSettings" layoutX="428.0" layoutY="194.0" mnemonicParsing="false" onAction="#moveToSettings" prefHeight="70.0" prefWidth="203.0" style="-fx-background-color: #DC143C;" text="Налаштування" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
