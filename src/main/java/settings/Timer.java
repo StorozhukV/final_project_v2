@@ -1,7 +1,7 @@
 package settings;
 
 public class Timer {
-    private static long currentTimeMills;
+    public static long currentTimeMills;
 
     public static void startTimer() {
         currentTimeMills = System.currentTimeMillis();

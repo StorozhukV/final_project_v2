@@ -1,6 +1,5 @@
 package controllers;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,14 +9,13 @@ import logic.CacheController;
 import logic.ChannelData;
 import logic.DataController;
 import logic.Settings;
-import service.entity.CollectionGlobalInfoComparisonImpl;
+import service.entity.CollectionGlobalInfoComparisonImplAdditional;
 import service.entity.DoubleData;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-
-public class CompareInfoController {
+public class MediaCompareInfoController {
     private static final String DELIMITER = ",";
     public Button btnBack;
     public TextField txtChannelId;
@@ -31,7 +29,7 @@ public class CompareInfoController {
     private logic.Settings settings;
     private CacheController cacheController;
     private DataController dataController;
-    private CollectionGlobalInfoComparisonImpl channelGlobalInfo = new CollectionGlobalInfoComparisonImpl();
+    private CollectionGlobalInfoComparisonImplAdditional channelGlobalInfo = new CollectionGlobalInfoComparisonImplAdditional();
     public void moveToBack(ActionEvent event) {
         try {
             AppRunner.window.setScene(new Scene(FXMLLoader.load(getClass().getResource("/fxmls/analytics.fxml"))));
@@ -48,9 +46,9 @@ public class CompareInfoController {
         long startTime = System.nanoTime();
         String channels = txtChannelId.getText();
         channels = channels.replaceAll(" ", "");
-        ChannelData channel1 = dataController.getChannelData
+        ChannelData channel1 = dataController.getFullChannelData
                 (channels.substring(0, channels.indexOf(DELIMITER)));
-        ChannelData channel2 = dataController.getChannelData
+        ChannelData channel2 = dataController.getFullChannelData
                 (channels.substring(channels.indexOf(DELIMITER) + 1,channels.length()));
         long runTime = (System.nanoTime() - startTime);
         double runTimeInSeconds = TimeUnit.MILLISECONDS.convert(runTime, TimeUnit.NANOSECONDS) / 1000.0;

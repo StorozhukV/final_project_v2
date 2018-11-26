@@ -21,8 +21,8 @@ import static settings.Timer.finishTimer;
 import static settings.Timer.startTimer;
 
 public class SettingController implements Initializable {
-    private final String pathSettings = "src\\main\\java\\fileWithSettings";
-    private Settings settings = new Settings(false, pathSettings, true);
+    private final String PATH_SETTINGS = "src/main/java/fileWithSettings";
+
 
     @FXML
     public Button btnHome;
@@ -47,7 +47,7 @@ public class SettingController implements Initializable {
     public void save(ActionEvent event) {
         startTimer(); // start timer
 
-        MyFileWriter writer = new MyFileWriter(pathSettings);
+        MyFileWriter writer = new MyFileWriter(PATH_SETTINGS);
         try {
             writer.write(Settings.serializeObject(new Settings(Boolean.parseBoolean(txtCache.getText()),
                     txtPathToCache.getText(),
@@ -65,13 +65,13 @@ public class SettingController implements Initializable {
     // Method for set settings from file
     public void setSettingsFromFile() {
         String jsonFromFile = null;
-        MyFileReader reader = new MyFileReader(pathSettings);
+        MyFileReader reader = new MyFileReader(PATH_SETTINGS);
         try {
             jsonFromFile = reader.read();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        settings = Settings.parseFromJson(jsonFromFile);
+        Settings settings = Settings.parseFromJson(jsonFromFile);
 
         txtCache.setText(Boolean.toString(settings.isSaveCache()));
         txtPathToCache.setText(settings.getPathToCache());

@@ -32,7 +32,7 @@ public class SortInfoController {
         }
     }
 
-    
+
     public void search(ActionEvent event) {
         Timer.startTimer();
 

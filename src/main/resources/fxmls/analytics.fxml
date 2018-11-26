@@ -47,14 +47,19 @@
                      <font>
                         <Font size="19.0" />
                      </font></Button>
-                  <Button fx:id="btnCompareInfo" layoutX="131.0" layoutY="116.0" mnemonicParsing="false" onAction="#moveToCompareInfo" prefHeight="42.0" prefWidth="436.0" style="-fx-background-color: #000000;" text="Порівнення головної інформації про канали" textFill="WHITE">
+                  <Button fx:id="btnCompareInfo" layoutX="131.0" layoutY="116.0" mnemonicParsing="false" onAction="#moveToCompareInfo" prefHeight="42.0" prefWidth="436.0" style="-fx-background-color: #000000;" text="Порівняння головної інформації про канали" textFill="WHITE">
                      <font>
                         <Font size="19.0" />
                      </font></Button>
-                  <Button fx:id="btnSortingChannel" layoutX="131.0" layoutY="167.0" mnemonicParsing="false" onAction="#sortingChannel" prefHeight="42.0" prefWidth="436.0" style="-fx-background-color: #000000;" text="Сортування каналів за їх даними" textFill="WHITE">
+                  <Button fx:id="btnMedia" layoutX="131.0" layoutY="167.0" mnemonicParsing="false" onAction="#media" prefHeight="42.0" prefWidth="436.0" style="-fx-background-color: #000000;" text="Медіа резонанс" textFill="WHITE">
                      <font>
                         <Font size="19.0" />
                      </font></Button>
+                  <Button fx:id="btnCompareMedia" layoutX="131.0" layoutY="220.0" mnemonicParsing="false" onAction="#compareMedia" prefHeight="42.0" prefWidth="436.0" style="-fx-background-color: #000000;" text="Порівняння медіа резонансу" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
         </items>

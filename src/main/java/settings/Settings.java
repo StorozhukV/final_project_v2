@@ -3,14 +3,13 @@ package settings;
 import com.alibaba.fastjson.JSON;
 
 public class Settings {
-    private boolean saveCache;
-    private String pathToCache;
-    private boolean time;
+    public static boolean saveCache;
+    public static String pathToCache;
+    public static boolean time;
 
     // Serialization from object to JSON
     public static String serializeObject(Settings set) {
-        String json = JSON.toJSONString(set);
-        return json;
+        return JSON.toJSONString(set);
     }
 
     // Deserialization from JSON to object
@@ -21,10 +20,10 @@ public class Settings {
     public Settings() {
     }
 
-    public Settings(boolean saveCash, String pathToCache, boolean time) {
-        this.saveCache = saveCash;
-        this.pathToCache = pathToCache;
-        this.time = time;
+    public Settings(boolean saveCache, String pathToCache, boolean time) {
+        Settings.saveCache = saveCache;
+        Settings.pathToCache = pathToCache;
+        Settings.time = time;
     }
 
     public boolean isSaveCache() {
@@ -32,7 +31,7 @@ public class Settings {
     }
 
     public void setSaveCache(boolean saveCache) {
-        this.saveCache = saveCache;
+        Settings.saveCache = saveCache;
     }
 
     public String getPathToCache() {
@@ -40,7 +39,7 @@ public class Settings {
     }
 
     public void setPathToCache(String pathToCache) {
-        this.pathToCache = pathToCache;
+        Settings.pathToCache = pathToCache;
     }
 
     public boolean isTime() {
@@ -48,7 +47,7 @@ public class Settings {
     }
 
     public void setTime(boolean time) {
-        this.time = time;
+        Settings.time = time;
     }
 
     @Override

@@ -39,7 +39,23 @@ public class AnalyticsController{
         }
     }
 
+    public void media(ActionEvent event) {
+        try {
+            AppRunner.window.setScene(new Scene(FXMLLoader.load(getClass().getResource("/fxmls/media.fxml"))));
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void compareMedia(ActionEvent event) {
+        try {
+            AppRunner.window.setScene(new Scene(FXMLLoader.load(getClass().getResource("/fxmls/mediaCompare.fxml"))));
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+    }
     public void sortingChannel(ActionEvent event) {
         try {
             AppRunner.window.setScene(new Scene(FXMLLoader.load(getClass().getResource("/fxmls/sortInfo.fxml"))));
@@ -48,5 +64,4 @@ public class AnalyticsController{
             e.printStackTrace();
         }
     }
-
 }

@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AnalyticsController">
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MediaCompareInfoController">
    <children>
       <SplitPane dividerPositions="0.2429718875502008" layoutX="7.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -33,33 +33,40 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <Button fx:id="btnHome" layoutX="583.0" layoutY="14.0" mnemonicParsing="false" onAction="#moveToHome" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #DC143C;" text="Головна" textFill="WHITE">
+                  <Button fx:id="btnBack" layoutX="583.0" layoutY="14.0" mnemonicParsing="false" onAction="#moveToBack" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #DC143C;" text="Назад" textFill="WHITE">
                      <font>
                         <Font name="Consolas" size="19.0" />
                      </font>
                   </Button>
-                  <Label layoutX="202.0" layoutY="2.0" prefHeight="63.0" prefWidth="295.0" text="YouTube Analytics">
+                  <Label layoutX="15.0" prefHeight="63.0" prefWidth="491.0" text="Порівнення інформації про канали">
                      <font>
-                        <Font name="Consolas Bold" size="30.0" />
+                        <Font name="Consolas Bold" size="27.0" />
                      </font>
                   </Label>
-                  <Button fx:id="btnGlobalInfo" layoutX="131.0" layoutY="65.0" mnemonicParsing="false" onAction="#moveToGlobalInfo" prefHeight="42.0" prefWidth="436.0" style="-fx-background-color: #000000;" text="Відображення головної інформації про канал" textFill="WHITE">
+                  <TextField fx:id="txtChannelId" layoutX="185.0" layoutY="52.0" prefHeight="39.0" prefWidth="273.0" />
+                  <Label layoutX="40.0" layoutY="40.0" prefHeight="63.0" prefWidth="170.0" text="ID каналів">
                      <font>
-                        <Font size="19.0" />
-                     </font></Button>
-                  <Button fx:id="btnCompareInfo" layoutX="131.0" layoutY="116.0" mnemonicParsing="false" onAction="#moveToCompareInfo" prefHeight="42.0" prefWidth="436.0" style="-fx-background-color: #000000;" text="Порівняння головної інформації про канали" textFill="WHITE">
-                     <font>
-                        <Font size="19.0" />
-                     </font></Button>
-                  <Button fx:id="btnMedia" layoutX="131.0" layoutY="167.0" mnemonicParsing="false" onAction="#media" prefHeight="42.0" prefWidth="436.0" style="-fx-background-color: #000000;" text="Медіа резонанс" textFill="WHITE">
-                     <font>
-                        <Font size="19.0" />
-                     </font></Button>
-                  <Button fx:id="btnCompareMedia" layoutX="131.0" layoutY="220.0" mnemonicParsing="false" onAction="#compareMedia" prefHeight="42.0" prefWidth="436.0" style="-fx-background-color: #000000;" text="Порівняння медіа резонансу" textFill="WHITE">
+                        <Font name="Consolas Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnSearch" layoutX="470.0" layoutY="48.0" mnemonicParsing="false" onAction="#search" prefHeight="39.0" prefWidth="101.0" style="-fx-background-color: #000000;" text="Знайти" textFill="WHITE">
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Button>
+                  <TableView fx:id="table" layoutX="31.0" layoutY="103.0" prefHeight="245.0" prefWidth="640.0">
+                    <columns>
+                      <TableColumn fx:id="columnTypeOfInfo" prefWidth="230.0" text="Тип інформації" />
+                      <TableColumn fx:id="columnFirstData" prefWidth="210.0" text="1-й канал" />
+                        <TableColumn fx:id="columnSecondData" prefWidth="199.0" text="2-й канал" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="lblRequestTime" layoutX="583.0" layoutY="73.0" prefHeight="27.0" prefWidth="101.0" />
+                  <Label layoutX="19.0" layoutY="80.0" prefHeight="19.0" prefWidth="170.0" text="введіть через &quot;,&quot; та пробіл">
+                     <font>
+                        <Font name="Consolas" size="11.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
         </items>
