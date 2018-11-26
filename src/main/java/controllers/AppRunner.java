@@ -1,3 +1,5 @@
+package controllers;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +14,7 @@ public class AppRunner extends Application {
     }
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("./fxmls/home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxmls/home.fxml"));
         primaryStage.setTitle("YouTube Analyzer");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

@@ -1,14 +1,14 @@
 package Entity;
 
 import Entity.entity.ResponseChannel;
+import Entity.playList.ResponsePlaylist;
+import Entity.video.ResponseVideo;
 import com.alibaba.fastjson.JSON;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.ObjectMapper;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import newFinalProject.Entity.entity.ResponseChannel;
-import newFinalProject.Entity.playList.ResponsePlaylist;
-import newFinalProject.Entity.video.ResponseVideo;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +29,7 @@ public class YouTubeChannels {
             return JSON.toJSONString(value);
         }
     };
+
     static {
         Unirest.setObjectMapper(mapper);
     }
