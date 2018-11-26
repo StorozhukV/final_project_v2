@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SortInfoController">
+   <children>
+      <SplitPane dividerPositions="0.2429718875502008" layoutX="7.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ImageView fitHeight="91.0" fitWidth="163.0" layoutX="27.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="541.7572784423828" AnchorPane.topAnchor="13.0">
+                     <image>
+                        <Image url="@../YouTube_logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="166.0" layoutY="14.0" text="YouTube Analytics" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="62.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="595.0" layoutY="95.0" text="version 1.0.0.0.0.1" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="30.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="btnBack" layoutX="583.0" layoutY="14.0" mnemonicParsing="false" onAction="#moveToBack" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #DC143C;" text="Назад" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="19.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="15.0" layoutY="-5.0" prefHeight="63.0" prefWidth="525.0" text="Порівняння та сортування інформації про канали">
+                     <font>
+                        <Font name="Consolas Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtChannelId" layoutX="185.0" layoutY="52.0" prefHeight="39.0" prefWidth="273.0" />
+                  <Label layoutX="40.0" layoutY="40.0" prefHeight="63.0" prefWidth="170.0" text="ID каналів">
+                     <font>
+                        <Font name="Consolas Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnSearch" layoutX="470.0" layoutY="48.0" mnemonicParsing="false" onAction="#search" prefHeight="39.0" prefWidth="101.0" style="-fx-background-color: #000000;" text="Знайти" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="table" layoutX="17.0" layoutY="152.0" prefHeight="212.0" prefWidth="668.0">
+                     <columns>
+                        <TableColumn fx:id="columnName" prefWidth="159.0" text="Назва каналу" />
+                        <TableColumn fx:id="columnId" prefWidth="91.0" text="ID" />
+                        <TableColumn fx:id="columnDate" prefWidth="88.0" text="Дата створення" />
+                        <TableColumn fx:id="columnSubscribers" minWidth="0.0" prefWidth="118.0" text="Підписники" />
+                        <TableColumn fx:id="columnVideos" minWidth="0.0" prefWidth="105.0" text="Відео" />
+                        <TableColumn fx:id="columnViews" prefWidth="106.0" text="Перегляди" />
+                     </columns>
+                  </TableView>
+                  <MenuButton layoutX="17.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="187.0" style="-fx-background-color: #000000;" text="Відсортувати за:" textFill="WHITE">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="назва каналу" />
+                      <MenuItem mnemonicParsing="false" text="дата створення" />
+                        <MenuItem mnemonicParsing="false" text="к-сть підписників" />
+                        <MenuItem mnemonicParsing="false" text="к-сть відео на каналі" />
+                        <MenuItem mnemonicParsing="false" text="к-сть переглядів" />
+                    </items>
+                  </MenuButton>
+                  <Label layoutX="13.0" layoutY="81.0" prefHeight="19.0" prefWidth="170.0" text="введіть через &quot;,&quot; та пробіл">
+                     <font>
+                        <Font name="Consolas" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRequestTime" layoutX="583.0" layoutY="123.0" prefHeight="27.0" prefWidth="101.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -34,6 +34,13 @@
     <artifactId>fastjson</artifactId>
     <version>1.2.51</version>
 </dependency>
+    <dependency>
+        <groupId>com.oracle</groupId>
+        <artifactId>javafx</artifactId>
+        <version>2.2.3</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/lib/jfxrt.jar</systemPath>
+    </dependency>
 </dependencies>
 
 </project>
